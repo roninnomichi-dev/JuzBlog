@@ -84,9 +84,9 @@ $('.postlist li a').click(function() {
 $('#update-blog-btn').click(function(e) {
   e.preventDefault();
   var formData = $(this).serialize();
-  $.post('update_blog.php', data: formData, function(data, textStatus, xhr) {
+  $.post('update_blog.php', {data: formData}, function() {
     $('#yep').show();
-    $('#yep p').html(post updated);
+    $('#yep p').html('post updated');
     $('#update-blog').trigger('reset');
   });
 });
