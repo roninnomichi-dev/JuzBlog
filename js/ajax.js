@@ -76,25 +76,40 @@ $('#post-blog').submit(function(e){
 })
 // dynamic user post list and form
 $('.postlist li a').click(function() {
-  var getpost = $(this).attr(id);
+  var getpost = $(this).attr('id');
   $('#post-blog').addClass('gone');
-  $('#writebox').load('updatepost.php', { post: getpost });
+  $('#rite').addClass('gone');
+  $('#edit').removeClass('gone');
+  $('#writebox').load('updatepost_form.php', { post: getpost });
 });
 //edit del clear btndds
-$('#update-blog-btn').click(function(e) {
+$('#update-blog').submit(function(e) {
   e.preventDefault();
-  var formData = $(this).serialize();
-  $.post('update_blog.php', {data: formData}, function() {
+  var newFormData = $(this).serialize();
+  $.ajax({
+    url: 'edit_post.php',
+    type: 'post',
+
+    data: newFormData
+  })
+  .done(function(resp) {
     $('#yep').show();
-    $('#yep p').html('post updated');
-    $('#update-blog').trigger('reset');
+    $('#yep p').html(resp);
+  })
+  .fail(function() {
+    console.log("error");
+  })
+  .always(function() {
+    console.log("complete");
   });
+
 });
 
 $('#delete-blog-btn').click(function() {
-  $.post('delete_blog.php', post: 'value1', function(data, textStatus, xhr) {
+    var killpost = $(this).attr('id');
+  $.post('delete_blog.php',{ post: killpost}, function(resp) {
     $('#yep').show();
-    $('#yep p').html(post deleted);
+    $('#yep p').html(resp);
     $('#update-blog').trigger('reset');
   });
   });

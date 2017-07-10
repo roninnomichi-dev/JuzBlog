@@ -12,8 +12,8 @@ include 'head.html.php';
  ?>
 
       <div class="header">
-      <h1 class="display-3 text-white">Write.</h1>
-      <h1 class="display-3 text-white gone">Edit.</h1>
+      <h1 id="rite"class="display-3 text-white">Write.</h1>
+      <h1 id="edit" class="display-3 text-white gone">Edit.</h1>
       </div>
 <div class="row shade">
 <div class="col-sm-10">
@@ -69,7 +69,7 @@ include 'head.html.php';
       <p>Posted!</p>  <a class="btn btn-primary" href="../index.php">Go Home?</a>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true"><i class="fa fa-thumbs-o-up"></i></span>
-    
+
     </div>
   </div>
 </div>
