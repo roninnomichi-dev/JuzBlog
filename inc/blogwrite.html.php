@@ -13,12 +13,13 @@ include 'head.html.php';
 
       <div class="header">
       <h1 class="display-3 text-white">Write.</h1>
+      <h1 class="display-3 text-white gone">Edit.</h1>
       </div>
 <div class="row shade">
 <div class="col-sm-10">
   <div class="container">
 
-
+<!--  write new post -->
   <form class="text-white" id="post-blog" name="post-blog">
     <fieldset class="form-group">
       <label for="title">title</label>
@@ -34,20 +35,9 @@ include 'head.html.php';
     <button type="submit" name="post-blog-btn" class="btn btn-primary">Submit</button>
   </form>
 
-  <form class="text-white gone" id="update-blog" name="update-blog">
-    <fieldset class="form-group">
-      <label for="title">title</label>
-      <input type="text" class="form-control" id="title" placeholder="title">
-    </fieldset>
-    <fieldset class="form-group">
-      <label for="content">content</label>
-      <textarea class="form-control" id="content" rows="15"></textarea>
+<!-- EDIT previous post -->
 
-    </fieldset>
-
-    <input type="hidden" name="author" value="<?php  echo $_SESSION['user_session'];?>">
-    <button type="submit" name="update-blog-btn" class="btn btn-primary">Submit</button>
-  </form>
+<br />
   </div>
 </div>
 <div class="col-sm-2">
@@ -55,7 +45,7 @@ include 'head.html.php';
   <small class="text-white">click to edit</small>
   <?php
 
-  $database->query('SELECT title, post_date, post_id FROM blogposts WHERE author_id = :uid');
+  $database->query('SELECT post_id, title, content, post_date  FROM blogposts WHERE author_id = :uid');
   $database->bind(':uid', $_SESSION['user_session']);
   $database->execute();
   $userposts = $database->resultSet();

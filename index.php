@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'inc/myconf.php';
-include 'inc/class.database.php';
+//include 'inc/class.database.php';
 
 //$database = new Database();
 

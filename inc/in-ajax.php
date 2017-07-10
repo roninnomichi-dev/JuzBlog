@@ -4,7 +4,7 @@ include 'myconf.php';
 require $INC_DIR . 'class.database.php';
 $database = new Database();
 
-$database->query('SELECT uid, uname, email, hash FROM users WHERE uname=:uname OR email=:email');
+$database->query('SELECT uid, uname, email, hash FROM users WHERE uname=:uname AND email=:email');
 $uname = strip_tags($_POST['uname']);
 $email = strip_tags($_POST['email']);
 $upass = strip_tags($_POST['pwd']);

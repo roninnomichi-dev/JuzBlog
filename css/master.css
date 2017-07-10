@@ -68,3 +68,6 @@
 .slida:hover {
   color: rgb(51, 85, 231);
 }
+.postlist li {
+  font-size: 1em;
+}
