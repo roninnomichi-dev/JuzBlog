@@ -13,7 +13,7 @@ $.ajax({
   success: function(data) {
    if(data == "yes"){
 $('#btn-login').html('checking...');
-  setTimeout(' window.location.href = "home.html.php"; ',1500);
+  setTimeout(' window.location.href = "home.html.php"; ',1000);
 } else if (data == "no") {
   $('#nup').css('display', 'block');
   $('#errmsg').html("You're not one of us! (yet...)");
@@ -39,6 +39,7 @@ $('#errmsg').html(data);
   .done(function(data) {
     if (data == "yep") {
       $('#yep').css('display', 'block');
+
     }
   })
   .fail(function(data) {
@@ -61,7 +62,7 @@ $('#post-blog').submit(function(e){
   })
   .done(function(data) {
     if(data == "yep"){
-	$('#post-blog').reset();
+	$('#post-blog').trigger('reset');
       $('#yep').show();
     }
   })
@@ -73,13 +74,37 @@ $('#post-blog').submit(function(e){
   });
 
 })
-/*
-$('clicka').click(function (e) {
+// dynamic user post list and form
+$('.postlist li a').click(function() {
+  var getpost = $(this).attr(id);
+  $('#post-blog').addClass('gone');
+  $('#writebox').load('updatepost.php', { post: getpost });
+});
+//edit del clear btndds
+$('#update-blog-btn').click(function(e) {
   e.preventDefault();
-  id = $(this).id();
+  var formData = $(this).serialize();
+  $.post('update_blog.php', data: formData, function(data, textStatus, xhr) {
+    $('#yep').show();
+    $('#yep p').html(post updated);
+    $('#update-blog').trigger('reset');
+  });
+});
 
+$('#delete-blog-btn').click(function() {
+  $.post('delete_blog.php', post: 'value1', function(data, textStatus, xhr) {
+    $('#yep').show();
+    $('#yep p').html(post deleted);
+    $('#update-blog').trigger('reset');
+  });
+  });
+
+$('#clear-blog-btn').click(function() {
+  $('#update-blog').trigger('reset');
+});
+
+$('#write-blog-btn').click(function () {
+  $('#update-blog').addClass('gone');
+  $('#post-blog').removeClass('gone');
 })
-*/
-
-
 });

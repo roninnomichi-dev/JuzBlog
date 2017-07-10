@@ -18,6 +18,8 @@ include 'head.html.php';
 <div class="row shade">
 <div class="col-sm-10">
   <div class="container">
+    <div id="writebox">
+
 
 <!--  write new post -->
   <form class="text-white" id="post-blog" name="post-blog">
@@ -35,8 +37,8 @@ include 'head.html.php';
     <button type="submit" name="post-blog-btn" class="btn btn-primary">Submit</button>
   </form>
 
-<!-- EDIT previous post -->
 
+</div>
 <br />
   </div>
 </div>
@@ -64,9 +66,10 @@ include 'head.html.php';
 <div class="row">
   <div class="col-sm-12">
     <div id="yep" class="alert alert-success alert-dismissible fade show">
+      <p>Posted!</p>  <a class="btn btn-primary" href="../index.php">Go Home?</a>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true"><i class="fa fa-thumbs-o-up"></i></span>
-    <p>Posted!</p>  <a class="btn btn-primary" href="../index.php">Go Home?</a>
+    
     </div>
   </div>
 </div>
