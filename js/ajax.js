@@ -122,9 +122,7 @@ $('#writebox').on('click', '#delete-blog-btn', function(e) {
 
   });
 
-$('#clear-btn').click(function() {
-  $(this).trigger('reset');
-});
+
 
 $('#write-blog-btn').click(function () {
   $('#update-blog').addClass('gone');

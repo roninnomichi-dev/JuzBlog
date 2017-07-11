@@ -7,9 +7,10 @@ $('.slida').click(function() {
 
 });
 //non ajax crud ops etc
-$('#clear-btn').click(function() {
-  $(this).trigger('reset');
-});
+/*
+$('#clear-form-btn').click(function() {
+  $('#update-blog').trigger('reset');
+}); */
 
 $('#writebox').on('click', '#clear-form-btn', function() {
   $('#update-blog').trigger('reset');
