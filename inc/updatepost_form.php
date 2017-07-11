@@ -37,7 +37,7 @@ $row = $database->single();
 
   <button type="submit" name="update-blog-btn" id="update-blog-btn" class="btn btn-primary">Update</button>
   <button type="button" name="delete-blog-btn" id="delete-blog-btn" class="btn btn-warning">Delete</button>
-  <button type="submit" name="clear-blog-btn" id="clear-blog-btn" class="btn btn-success">Clear</button>
+  <button type="submit" name="clear-form-btn" id="clear-form-btn" class="btn btn-success">Clear</button>
   <button type="submit" name="write-blog-btn" id="write-blog-btn" class="btn btn-info">New Post</button>
   </div>
 </form>

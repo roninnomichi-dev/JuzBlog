@@ -83,18 +83,21 @@ $('.postlist li a').click(function() {
   $('#writebox').load('updatepost_form.php', { post: getpost });
 });
 //edit del clear btndds
-$('#update-blog').submit(function(e) {
+$('#writebox').on('submit', '#update-blog', function(e) {
   e.preventDefault();
   var newFormData = $(this).serialize();
+
   $.ajax({
     url: 'edit_post.php',
     type: 'post',
-
     data: newFormData
   })
-  .done(function(resp) {
+
+  .done(function(data) {
+    if(data == "post edited"){
     $('#yep').show();
-    $('#yep p').html(resp);
+    $('#yep p').html(data);
+    }
   })
   .fail(function() {
     console.log("error");
@@ -102,10 +105,10 @@ $('#update-blog').submit(function(e) {
   .always(function() {
     console.log("complete");
   });
-
 });
 
-$('#delete-blog-btn').click(function() {
+$('#writebox').on('submit', '#delete-blog-btn', function(e) {
+  e.preventDefault();
     var killpost = $(this).attr('id');
   $.post('delete_blog.php',{ post: killpost}, function(resp) {
     $('#yep').show();
@@ -114,8 +117,8 @@ $('#delete-blog-btn').click(function() {
   });
   });
 
-$('#clear-blog-btn').click(function() {
-  $('#update-blog').trigger('reset');
+$('#clear-form-btn', '#clear-btn').click(function() {
+  $(this).trigger('reset');
 });
 
 $('#write-blog-btn').click(function () {
