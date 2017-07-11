@@ -27,7 +27,7 @@ $row = $database->single();
     <textarea name="content" class="form-control" id="content" rows="15"><?php echo $row['content']; ?></textarea>
 
   </fieldset>
-<input type="hidden" name="post_id" value="<?php  echo $post_id;?>">
+<input id="hid_pid" type="hidden" name="post_id" value="<?php  echo $post_id;?>">
 
 
 

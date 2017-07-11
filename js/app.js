@@ -6,4 +6,17 @@ $('.slida').click(function() {
   $('p[data-get=' + target + ']').slideToggle('slow');
 
 });
+//non ajax crud ops etc
+$('#clear-btn').click(function() {
+  $(this).trigger('reset');
+});
+
+$('#writebox').on('click', '#clear-form-btn', function() {
+  $('#update-blog').trigger('reset');
+})
+$('#write-blog-btn').click(function () {
+  $('#update-blog').addClass('gone');
+  $('#post-blog').removeClass('gone');
+})
+
 });

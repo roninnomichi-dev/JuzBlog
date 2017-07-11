@@ -66,11 +66,11 @@ include 'head.html.php';
 <div class="row">
   <div class="col-sm-12">
     <div id="yep" class="alert alert-success alert-dismissible fade show">
-      <p>Posted!</p>  <a class="btn btn-primary" href="../index.php">Go Home?</a>
-      <button type="button" id="clear-btn" class="btn btn-warning">new post?</button>
+      <p>Posted!</p>  <a class="btn btn-primary" href="../home.html.php">Go Home?</a>
+      <a type="button" href="blogwrite.html.php" id="clear-btn" class="btn btn-warning gone">new post?</a>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 
-    <span aria-hidden="true"><i class="fa fa-thumbs-o-up"></i></span>
+    <span aria-hidden="true">dismiss <i class="fa fa-thumbs-o-up"></i></span>
 
     </div>
   </div>

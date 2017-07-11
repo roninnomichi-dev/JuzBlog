@@ -97,6 +97,7 @@ $('#writebox').on('submit', '#update-blog', function(e) {
     if(data == "post edited"){
     $('#yep').show();
     $('#yep p').html(data);
+    $('#clear-btn').removeClass('gone');
     }
   })
   .fail(function() {
@@ -107,17 +108,21 @@ $('#writebox').on('submit', '#update-blog', function(e) {
   });
 });
 
-$('#writebox').on('submit', '#delete-blog-btn', function(e) {
+$('#writebox').on('click', '#delete-blog-btn', function(e) {
   e.preventDefault();
-    var killpost = $(this).attr('id');
-  $.post('delete_blog.php',{ post: killpost}, function(resp) {
+    var killpost = $('#hid_pid').val();
+ $.post('delete.php',{ post: killpost }, function(data) {
+   if(data == "Post deleted"){
     $('#yep').show();
-    $('#yep p').html(resp);
-    $('#update-blog').trigger('reset');
-  });
+    $('#yep p').html(data);
+    $('#clear-btn').removeClass('gone');
+    $('#post-blog').trigger('reset');
+    }
   });
 
-$('#clear-form-btn', '#clear-btn').click(function() {
+  });
+
+$('#clear-btn').click(function() {
   $(this).trigger('reset');
 });
 
