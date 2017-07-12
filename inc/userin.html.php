@@ -5,6 +5,7 @@ $page = "register";
 require_once $INC_DIR . 'class.database.php';
 $database = new Database();
 
+
  ?>
  <!DOCTYPE html>
  <html>

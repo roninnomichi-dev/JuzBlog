@@ -1,4 +1,11 @@
+<?php
 
+if (isset($_POST['user-logout-fp']) && !empty($_POST['user-logout-fp'])) {
+  if ($database->doLogout()) {
+    $database->redirect('index.php');
+  };
+}
+ ?>
 
 
 <!DOCTYPE html>

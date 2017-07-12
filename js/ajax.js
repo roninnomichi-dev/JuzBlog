@@ -151,5 +151,11 @@ $('#writebox').on('click', '#delete-blog-btn', function(e) {
 $('#write-blog-btn').click(function () {
   $('#update-blog').addClass('gone');
   $('#post-blog').removeClass('gone');
-})
+});
+$('#user-login-fp').submit(function(e) {
+  e.preventDefault();
+  var here = $(location).attr('href');
+  var postdata = $(this).serialize();
+  $.get(here, postdata);
+});
 });

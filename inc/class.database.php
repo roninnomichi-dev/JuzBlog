@@ -132,6 +132,7 @@ public function doLogout()
 {
   session_destroy();
   unset($_SESSION['user_session']);
+  unset($_SESSION['username']);
   return true;
 }
 

@@ -13,7 +13,9 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
 
 
 if (isset($_POST['user-logout-fp']) && !empty($_POST['user-logout-fp'])) {
-  $user->doLogout();
+  if ($database->doLogout()) {
+    $database->redirect('index.php');
+  };
 }
 
  ?>
@@ -56,7 +58,7 @@ if (isset($_POST['user-logout-fp']) && !empty($_POST['user-logout-fp'])) {
 
   </div>
 <p class="namer"><?php echo $_SESSION['username']; ?></p>
-  <button type="button" class="btn btn-logout" name="user-logout-fp">Logout <i class="fa fa-hand-peace-o"></i></button>
+  <button type="submit" class="btn btn-secondary btn-logout" name="user-logout-fp" id="user-logout-fp">Logout <i class="fa fa-hand-peace-o"></i></button>
 
 
 
