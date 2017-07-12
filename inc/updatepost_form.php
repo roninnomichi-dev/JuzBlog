@@ -25,19 +25,19 @@ $row = $database->single();
   <fieldset class="form-group">
     <label for="content">content</label>
     <textarea name="content" class="form-control" id="content" rows="15"><?php echo $row['content']; ?></textarea>
-
-  </fieldset>
 <input id="hid_pid" type="hidden" name="post_id" value="<?php  echo $post_id;?>">
 
-
-
-
-  <div class="btn-group" role="group">
-
-
+  </fieldset>
+  <div class="container">
+  <div id="edit-group" class="btn-group" role="group">
   <button type="submit" name="update-blog-btn" id="update-blog-btn" class="btn btn-primary">Update</button>
   <button type="button" name="delete-blog-btn" id="delete-blog-btn" class="btn btn-warning">Delete</button>
   <button type="button" name="clear-form-btn" id="clear-form-btn" class="btn btn-success">Clear</button>
   <button type="button" name="write-blog-btn" id="write-blog-btn" class="btn btn-info">New Post</button>
   </div>
+</div>
+
+
+
+
 </form>

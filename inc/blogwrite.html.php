@@ -63,6 +63,11 @@ include 'head.html.php';
 </div>
 
 </div>
+<div class="row ">
+  <div class="col-sm-12">
+    
+  </div>
+</div>
 <div class="row">
   <div class="col-sm-12">
     <div id="yep" class="alert alert-success alert-dismissible fade show">

@@ -1,5 +1,5 @@
 <ul class="list-group">
-  <li class="list-group-item">Cras justo odio</li>
+  <p>you have no posts yet!</p>
   <li class="list-group-item">Dapibus ac facilisis in</li>
   <li class="list-group-item">Morbi leo risus</li>
   <li class="list-group-item">Porta ac consectetur ac</li>
