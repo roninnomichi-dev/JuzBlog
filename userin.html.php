@@ -47,9 +47,7 @@ $database = new Database();
       <form id="register" name="register" class="form" >
         <fieldset class="form-group">
           <label class="" for="name">handle</label>
-          <input class="form-control" type="text" name="name" placeholder="spicy_weener" <?php if(isset($_COOKIE['remember_me'])) {
-  		echo 'value="' . $_COOKIE['remember_me'] . '"';
-  	}?> >
+          <input class="form-control" type="text" name="name" placeholder="spicy_weener"  >
         </fieldset>
         <fieldset class="form-group" >
           <label class="" for="email">email</label>
@@ -59,18 +57,7 @@ $database = new Database();
           <label class="" for="pwd">password</label>
           <input class="form-control" type="password" name="pwd" placeholder="la la la, not listening...">
         </fieldset>
-        <fieldset class="form-check">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="remember" id="remember" <?php if(isset($_COOKIE['remember_me'])) {
-		echo 'checked="checked"';
-	}
-	else {
-		echo '';
-	}
-	?>>
-        Remember me!
-      </label>
-    </fieldset>
+        
         <button type="submit" class="btn btn-success" id="reg" name="button-reg" >submit</button>
       </form>
     </div>

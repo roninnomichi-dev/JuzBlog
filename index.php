@@ -44,7 +44,9 @@ include 'inc/myconf.php';
 
         <div class="form-group">
         <label for="uname">who are you?</label>
-        <input type="text" class="form-control" name="uname" placeholder="your handle" required />
+        <input type="text" class="form-control" name="uname" placeholder="your handle" required <?php if(isset($_COOKIE['remember_me'])) {
+    echo 'value="' . $_COOKIE['remember_me'] . '"';
+  }?>/>
         <span id="check-e"></span>
         </div>
         <div class="form-group">
@@ -59,7 +61,18 @@ include 'inc/myconf.php';
         </div>
 
      	<hr />
-
+      <div class="form-check">
+      <label class="form-check-label">
+      <input type="checkbox" class="form-check-input" name="remember" id="remember" <?php if(isset($_COOKIE['remember_me'])) {
+      echo 'checked';
+      }
+      else {
+      echo '';
+      }
+      ?>>
+      Remember me!
+      </label>
+    </div>
         <div class="form-group">
             <button type="submit" id="btn-login" name="btn-login" class="btn btn-default btn-login">
                 	<i class="fa fa-hand-spock-o"></i> &nbsp; SIGN IN
