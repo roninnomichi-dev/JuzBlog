@@ -24,15 +24,17 @@ if($database->rowCount() == 1)
   {
     $_SESSION['user_session'] = $row['uid'];
     $_SESSION['username'] = $row['uname'];
+
     if($_POST['remember']) {
-  setcookie('remember_me', $_POST['uname'], $year);
-  }
-  elseif(!$_POST['remember']) {
+      setcookie('remember_me', $_POST['uname'], $year);
+      }
+
+    elseif(!$_POST['remember']) {
   	if(isset($_COOKIE['remember_me'])) {
   		$past = time() - 100;
   		setcookie(remember_me, gone, $past);
-  	}
-  }
+  	   }
+     }
     echo "yes";
   }
   else

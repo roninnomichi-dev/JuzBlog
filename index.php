@@ -69,7 +69,7 @@ include 'inc/myconf.php';
       else {
       echo '';
       }
-      ?>>
+      ?> >
       Remember me!
       </label>
     </div>

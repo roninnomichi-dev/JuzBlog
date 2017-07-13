@@ -3,7 +3,7 @@ $(document).ready(function() {
 $('.content').hide();
 $('.slida').click(function() {
   var target = $(this).attr('id');
-  $('p[data-get=' + target + ']').slideToggle('slow');
+  $('section[data-get=' + target + ']').slideToggle('slow');
 
 });
 

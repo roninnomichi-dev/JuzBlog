@@ -3,20 +3,17 @@
 session_start();
 
 include_once 'inc/myconf.php';
-
 include_once 'inc/class.database.php';
+include 'inc/Parsedown.php';
 $database = new Database();
+$Parsedown = new Parsedown();
 if(!$database->is_loggedin()) { $database->redirect('index.php');}
 
 
 
 
 
-if (isset($_POST['user-logout-fp']) && !empty($_POST['user-logout-fp'])) {
-  if ($database->doLogout()) {
-    $database->redirect('index.php');
-  };
-}
+
 
  ?>
 <!DOCTYPE html>
@@ -58,7 +55,7 @@ if (isset($_POST['user-logout-fp']) && !empty($_POST['user-logout-fp'])) {
 
   </div>
 <p class="namer"><?php echo $_SESSION['username']; ?></p>
-  <button type="submit" class="btn btn-secondary btn-logout" name="user-logout-fp" id="user-logout-fp">Logout <i class="fa fa-hand-peace-o"></i></button>
+  <button type="submit" class="btn btn-secondary btn-logout" name="logout" id="logout">Logout <i class="fa fa-hand-peace-o"></i></button>
 
 
 
@@ -108,9 +105,9 @@ if (isset($_POST['user-logout-fp']) && !empty($_POST['user-logout-fp'])) {
   <div class="col-sm-4">
     <div class="card">
       <div class="card-block">
-        <h3 class="card-title">Special title treatment</h3>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h3 class="card-title">This does nothing!</h3>
+        <p class="card-text">Oh but dont you just want to click that button?.</p>
+        <a href="#" class="btn btn-primary">Do nothing!</a>
 
       </div>
     </div>
@@ -152,6 +149,7 @@ if (isset($_POST['user-logout-fp']) && !empty($_POST['user-logout-fp'])) {
 
 <footer class="py-5 bg-inverse">
         <div class="container">
+          <button type="submit" class="btn btn-secondary btn-logout" name="logout" id="logout">Logout <i class="fa fa-hand-peace-o"></i></button>
             <p class="m-0 text-center text-white">Copyright &copy; JuzWeb 2017</p>
         </div>
 
