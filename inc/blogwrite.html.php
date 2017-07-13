@@ -10,10 +10,31 @@ $page = "write";
 include 'head.html.php';
 
  ?>
-
-      <div class="header">
-      <h1 id="rite"class="display-3 text-white">Write.</h1>
-      <h1 id="edit" class="display-3 text-white gone">Edit.</h1>
+<!-- markdown helper modal -->
+<div class="modal fade" id="mdModal" tabindex="-1" role="dialog" aria-labelledby="mdModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="mdModalLabel">Markdown syntax</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p><b>What is Markdown?</b><br>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- page content start -->
+      <div class="header shade">
+      <h1 id="rite"class="display-3 text-white">write.</h1>
+      <h1 id="edit" class="display-3 text-white gone">edit.</h1>
       </div>
 <div class="row shade">
 <div class="col-sm-10">
@@ -40,6 +61,10 @@ include 'head.html.php';
 
 </div>
 <br />
+<h3>JuzBlog now has Markdown support!. <br><small>not familiar with markdown?</small></h3>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="mdModal">
+  Markdown help
+</button>
   </div>
 </div>
 <div class="col-sm-2">
@@ -65,7 +90,7 @@ include 'head.html.php';
 </div>
 <div class="row ">
   <div class="col-sm-12">
-    
+
   </div>
 </div>
 <div class="row">
