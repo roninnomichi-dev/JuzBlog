@@ -38,15 +38,12 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
       <li class="nav-item active">
         <a class="nav-link" href="index.php">home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/inc/path.html.php">tests</a>
-      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="/inc/blogwrite.html.php">write</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">juzweb</a>
+        <a class="nav-link" href="#">about</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">admin</a>

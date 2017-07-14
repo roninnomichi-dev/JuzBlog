@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+//modals
+//$('#mdModal').modal('show')  
 // FX
 $('.content').hide();
 $('.slida').click(function() {

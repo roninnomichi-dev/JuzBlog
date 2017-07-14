@@ -6,7 +6,7 @@
 //ON author_id = users.uid;
 
 $database->query('SELECT post_id, title, content, post_date, uname FROM blogposts INNER JOIN users
-ON author_id = users.uid; BY date ASC LIMIT 5');
+ON author_id = users.uid ORDER BY post_date DESC LIMIT 5');
 $rows = $database->resultset();
 
 foreach ($rows as $post):

@@ -32,6 +32,9 @@ include 'head.html.php';
   </div>
 </div>
 <!-- page content start -->
+<div class="container-fluid">
+
+
       <div class="header shade">
       <h1 id="rite"class="display-3 text-white">write.</h1>
       <h1 id="edit" class="display-3 text-white gone">edit.</h1>
@@ -62,7 +65,7 @@ include 'head.html.php';
 </div>
 <br />
 <h3>JuzBlog now has Markdown support!. <br><small>not familiar with markdown?</small></h3>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="mdModal">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mdModal">
   Markdown help
 </button>
   </div>
