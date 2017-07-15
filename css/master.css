@@ -74,3 +74,6 @@
 .postlist li {
   font-size: 0.8em;
 }
+#clear-btn {
+  margin: 7px;
+}

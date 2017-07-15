@@ -3,7 +3,8 @@ $(document).ready(function() {
 //modals
 //$('#mdModal').modal('show')
 // FX
-$('.content', "#helper", "#clear-btn").hide();
+
+$('.content', "#helper").hide();
 $('.slida').click(function() {
   var target = $(this).attr('id');
   $('section[data-get=' + target + ']').slideToggle('slow');

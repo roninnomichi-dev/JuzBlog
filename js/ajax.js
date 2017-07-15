@@ -63,7 +63,7 @@ $('#post-blog').submit(function(e){
   .done(function(data) {
     if(data == "yep"){
 	$('#post-blog').trigger('reset');
-      $('#yep').show();
+      $('#helper').html("posted").show();
     }
   })
   .fail(function(data) {
@@ -78,84 +78,12 @@ $('#post-blog').submit(function(e){
 $('.postlist li a').click(function() {
   var getpost = $(this).attr('id');
   $('#post-blog, #rite').addClass('gone');
-  $('#edit, #edit-group').removeClass('gone');
+  $('#edit, #clear-btn').removeClass('gone');
   $('#writebox').load('updatepost_form.php', { post: getpost });
 });
 
-//CRUD btns (ajax - non ajax to app.js
-/*
-$('#update-blog-btn').click(function (e) {
-  e.preventDefault();
-  var newFormData = $('#update-blog').serialize();
-  $.ajax({
-    url: 'edit_post.php',
-    type: 'post',
-    data: newFormData
-  })
-  .done(function(data) {
-    if(data == "post edited"){
-    $('#yep').show();
-    $('#yep p').html(data);
-    }
-  })
-  .fail(function() {
-    console.log("error");
-  })
-  .always(function() {
-    console.log("complete");
-  });
-});
-/*delete post
-$('#delete-blog-btn').click(function (e) {
-  e.preventDefault();
-    var killpost = $('#hid_pid').val();
-    $.ajax({
-      url: 'delete.php',
-      type: 'post',
-      data: killpost
-    })
-
-    .done(function(data) {
-      if(data == "post deleted"){
-      $('#yep').show();
-      $('#yep p').html(data);
-      $('#post-blog').trigger('reset');
-      }
-    })
-    .fail(function() {
-      console.log("error");
-    })
-    .always(function() {
-      console.log("complete");
-    });
-
-});
 
 
-$('#writebox').on('click', '#delete-blog-btn', function(e) {
-  e.preventDefault();
-    var killpost = $('#hid_pid').val();
- $.post('delete.php',{ post: killpost }, function(data) {
-   if(data == "Post deleted"){
-    $('#yep').show();
-    $('#yep p').html(data);
-    $('#clear-btn').removeClass('gone');
-    $('#post-blog').trigger('reset');
-    }
-  });
-
-  });
-*/
 
 
-$('#write-blog-btn').click(function () {
-  $('#update-blog').addClass('gone');
-  $('#post-blog').removeClass('gone');
-});
-$('#user-login-fp').submit(function(e) {
-  e.preventDefault();
-  var here = $(location).attr('href');
-  var postdata = $(this).serialize();
-  $.get(here, postdata);
-});
 });

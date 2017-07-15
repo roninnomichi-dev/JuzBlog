@@ -1,28 +1,9 @@
 $(document).ready(function() {
   // crud buttons
-//use jq bind() or on() to target dynamic gen elem.
 
-
-
-/*  $('#writebox').bind('submit', function(e) {
-     var target = $(e.target);
-     var post_id = target.serialize();
-     if(target.is('#delete-blog-btn')){
-       e.preventDefault();
-       crud('delete.php', post_id);
-     }
-     else if (target.is('#update-blog-btn')) {
-       e.preventDefault();
-       crud('edit_post.php', post_id);
-     }
-     else {
-       console.log('whoopsie');
-     }
-  })
-*/
 $('#writebox').on('click', '#delete-blog-btn', function(e){
   e.preventDefault();
-//  var killpost = $('#hid_pid').val();
+
 
   var post = $('#update-blog').serialize();
   crud('delete.php', post);
