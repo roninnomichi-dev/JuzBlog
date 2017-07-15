@@ -83,7 +83,7 @@ $('.postlist li a').click(function() {
 });
 
 //CRUD btns (ajax - non ajax to app.js
-
+/*
 $('#update-blog-btn').click(function (e) {
   e.preventDefault();
   var newFormData = $('#update-blog').serialize();
@@ -131,7 +131,7 @@ $('#delete-blog-btn').click(function (e) {
 
 });
 
-*/
+
 $('#writebox').on('click', '#delete-blog-btn', function(e) {
   e.preventDefault();
     var killpost = $('#hid_pid').val();
@@ -145,7 +145,7 @@ $('#writebox').on('click', '#delete-blog-btn', function(e) {
   });
 
   });
-
+*/
 
 
 $('#write-blog-btn').click(function () {

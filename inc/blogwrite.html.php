@@ -38,6 +38,7 @@ include 'head.html.php';
       <div class="header shade">
       <h1 id="rite"class="display-3 text-white">write.</h1>
       <h1 id="edit" class="display-3 text-white gone">edit.</h1>
+      <span id="helper" class="text-danger display-4 fade show"></span><span><a type="button" href="#" id="clear-btn" class="btn btn-warning fade show">new post?</a></span>
       </div>
 <div class="row shade">
 <div class="col-sm-10">
@@ -53,7 +54,7 @@ include 'head.html.php';
     </fieldset>
     <fieldset class="form-group">
       <label for="content">content</label>
-      <textarea class="form-control" id="content" name="content" rows="15"></textarea>
+      <textarea class="form-control" id="content" name="content" rows="10"></textarea>
 
     </fieldset>
 
@@ -64,10 +65,7 @@ include 'head.html.php';
 
 </div>
 <br />
-<h3>JuzBlog now has Markdown support!. <br><small>not familiar with markdown?</small></h3>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mdModal">
-  Markdown help
-</button>
+
   </div>
 </div>
 <div class="col-sm-2">
@@ -93,19 +91,15 @@ include 'head.html.php';
 </div>
 <div class="row ">
   <div class="col-sm-12">
-
+    <h3>JuzBlog now has Markdown support!. <br><small>not familiar with markdown?</small></h3>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mdModal">
+      Markdown help
+    </button>
   </div>
 </div>
 <div class="row">
   <div class="col-sm-12">
-    <div id="yep" class="alert alert-success alert-dismissible fade show">
-      <p>Posted!</p>  <a class="btn btn-primary" href="../home.html.php">Go Home?</a>
-      <a type="button" href="blogwrite.html.php" id="clear-btn" class="btn btn-warning gone">new post?</a>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 
-    <span aria-hidden="true">dismiss <i class="fa fa-thumbs-o-up"></i></span>
-
-    </div>
   </div>
 </div>
  </div>

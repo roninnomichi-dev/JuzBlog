@@ -23,5 +23,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <script src="../js/app.js" charset="utf-8"></script>
 <script src="../js/ajax.js" charset="utf-8"></script>
+<script src="../js/crud.js" charset="utf-8"></script>
   </body>
 </html>
