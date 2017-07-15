@@ -35,11 +35,21 @@ include 'head.html.php';
 <div class="container-fluid">
 
 
-      <div class="header shade">
+      <div class="row header shade">
+        <div class="col-sm-9">
+
+
       <h1 id="rite"class="display-3 text-white">write.</h1>
       <h1 id="edit" class="display-3 text-white gone">edit.</h1>
-      <span id="helper" class="text-danger display-4 fade show"></span><button id="clear-btn" class="btn btn-warning float-right gone">new post?</button>
+      <span id="helper" class="text-danger display-4 fade show"></span>
+    </div>
+      <div class="col-sm-3">
+
+
+      <button onclick="window.location.href='blogwrite.html.php'" id="clear-btn" class="btn btn-warning float-right gone">new post?</button>
       </div>
+      </div>
+
 <div class="row shade">
 <div class="col-sm-10">
   <div class="container">

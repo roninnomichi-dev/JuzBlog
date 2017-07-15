@@ -64,6 +64,7 @@ $('#post-blog').submit(function(e){
     if(data == "yep"){
 	$('#post-blog').trigger('reset');
       $('#helper').html("posted").show();
+      $('#clear-btn').removeClass('gone');
     }
   })
   .fail(function(data) {
