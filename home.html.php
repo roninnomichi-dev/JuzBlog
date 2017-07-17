@@ -51,8 +51,8 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
     </ul>
 
   </div>
-<p class="namer"><?php echo $_SESSION['username']; ?></p>
-  <button type="submit" class="btn btn-secondary btn-logout" name="logout" id="logout">Logout <i class="fa fa-hand-peace-o"></i></button>
+  <p class="namer"><?php echo $_SESSION['username']; ?></p>
+    <button type="submit" data-dir="home" class="btn btn-secondary btn-outline-danger btn-logout" name="logout" id="logout">Logout <i class="fa fa-hand-peace-o"></i></button>
 
 
 

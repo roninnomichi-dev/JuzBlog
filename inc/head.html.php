@@ -1,10 +1,5 @@
 <?php
 
-if (isset($_POST['user-logout-fp']) && !empty($_POST['user-logout-fp'])) {
-  if ($database->doLogout()) {
-    $database->redirect('index.php');
-  };
-}
  ?>
 
 
@@ -30,16 +25,11 @@ if (isset($_POST['user-logout-fp']) && !empty($_POST['user-logout-fp'])) {
       <li class="nav-item">
         <a class="nav-link" href="../home.html.php">home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="path.html.php">logic tests</a>
-      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="blogwrite.html.php">write</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="blogwrite.html.php">edit</a>
-      </li>
+
       <li class="nav-item">
         <a class="nav-link" href="#">juzweb</a>
       </li>
@@ -49,6 +39,6 @@ if (isset($_POST['user-logout-fp']) && !empty($_POST['user-logout-fp'])) {
     </ul>
   </div>
   <p class="namer"><?php echo $_SESSION['username']; ?></p>
-    <button type="button" class="btn btn-logout" name="user-logout-fp">Logout <i class="fa fa-hand-peace-o"></i></button>
+    <button type="submit" data-dir="inc" class="btn btn-secondary btn-outline-danger btn-logout" name="logout" id="logout">Logout <i class="fa fa-hand-peace-o"></i></button>
 
 </nav>

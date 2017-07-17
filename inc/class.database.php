@@ -130,9 +130,11 @@ public function is_loggedin()
 
 public function doLogout()
 {
-  session_destroy();
+
   unset($_SESSION['user_session']);
   unset($_SESSION['username']);
+  session_destroy();
+  
   return true;
 }
 

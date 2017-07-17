@@ -16,7 +16,11 @@ $('.slida').click(function() {
 
 });
 
-
+$('#logout').submit(function(){
+  data = $(this).attr(data-dir);
+  $.get({ 'inc/logout.php', data})
+}
+)
 
 $('#write-blog-btn').click(function () {
   $('#update-blog').addClass('gone');
