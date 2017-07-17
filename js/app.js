@@ -6,6 +6,10 @@ $(document).ready(function() {
 
 $('.content').hide();
 $('#helper').hide();
+
+
+
+
 $('.slida').click(function() {
   var target = $(this).attr('id');
   $('section[data-get=' + target + ']').slideToggle('slow');

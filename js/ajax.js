@@ -14,9 +14,15 @@ $.ajax({
    if(data == "yes"){
 $('#btn-login').html('checking...');
   setTimeout(' window.location.href = "home.html.php"; ',1000);
-} else if (data == "no") {
+} else if (data == "wrongpwd") {
   $('#nup').css('display', 'block');
-  $('#errmsg').html("You're not one of us! (yet...)");
+  $('#errmsg').html("Wrong Password, try again...");
+}
+else {
+  {
+    $('#nup').css('display', 'block');
+    $('#errmsg').html(data);
+  }
 }
 },
 error: function(data) {

@@ -1,9 +1,10 @@
 <?php
 session_start();
-include 'inc/myconf.php';
-//include 'inc/class.database.php';
 
-//$database = new Database();
+
+
+
+include 'inc/myconf.php';
 
 ?>
 <!DOCTYPE html>
@@ -44,32 +45,30 @@ include 'inc/myconf.php';
 
         <div class="form-group">
         <label for="uname">who are you?</label>
-        <input type="text" class="form-control" name="uname" placeholder="your handle" required <?php if(isset($_COOKIE['remember_me'])) {
-    echo 'value="' . $_COOKIE['remember_me'] . '"';
-  }?>/>
-        <span id="check-e"></span>
+        <input type="text" class="form-control" name="uname" placeholder="your handle" value="<?php if(isset($_COOKIE['remember_me'])){
+        echo $_COOKIE['remember_me']; } ?>"
+         />
+        <span class="formhelp"></span>
         </div>
         <div class="form-group">
           <label for="email">where do we send spam?</label>
         <input type="text" class="form-control" name="email" placeholder="your email" required />
-        <span id="check-e"></span>
+        <span class="formhelp"></span>
         </div>
 
         <div class="form-group">
           <label for="pwd">secret squirrel stuff</label>
         <input type="password" class="form-control" name="pwd" placeholder="Your Password" />
+            <span class="formhelp"></span>
         </div>
 
      	<hr />
       <div class="form-check">
-      <label class="form-check-label">
-      <input type="checkbox" class="form-check-input" name="remember" id="remember" <?php if(isset($_COOKIE['remember_me'])) {
-      echo 'checked';
-      }
-      else {
-      echo '';
-      }
-      ?> >
+
+      <input type="checkbox" class="form-check-input" name="remember_me"  <?php if(isset($_COOKIE['remember_me'])) {
+      echo "checked";
+      }?> >
+      <label id="rmb" for="remember_me">
       Remember me!
       </label>
     </div>
