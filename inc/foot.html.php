@@ -24,5 +24,9 @@
 <script src="../js/app.js" charset="utf-8"></script>
 <script src="../js/ajax.js" charset="utf-8"></script>
 <script src="../js/crud.js" charset="utf-8"></script>
+<script src="<?php if($page = "admin"){
+  echo "../js/chart.js";
+} ?>" charset="utf-8"></script>
+
   </body>
 </html>
