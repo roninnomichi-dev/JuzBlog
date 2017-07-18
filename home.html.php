@@ -67,7 +67,7 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
         <a class="nav-link" href="#">about</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">admin</a>
+        <a class="nav-link" href="/inc/admin.html.php">admin</a>
       </li>
     </ul>
 

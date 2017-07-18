@@ -56,7 +56,7 @@
         <a class="nav-link" href="#">juzweb</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">admin</a>
+        <a class="nav-link" href="admin.html.php">admin</a>
       </li>
     </ul>
   </div>

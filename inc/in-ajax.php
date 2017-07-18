@@ -5,7 +5,7 @@ require $INC_DIR . 'class.database.php';
 //include $INC_DIR . 'cookie.php';
 $database = new Database();
 
-$database->query('SELECT uid, uname, email, hash FROM users WHERE uname=:uname AND email=:email');
+$database->query('SELECT uid, uname, email, hash, role FROM users WHERE uname=:uname AND email=:email');
 $uname = strip_tags($_POST['uname']);
 $email = strip_tags($_POST['email']);
 $upass = strip_tags($_POST['pwd']);
@@ -32,6 +32,7 @@ if($database->rowCount() == 1)
     //end cookie block
     $_SESSION['user_session'] = $row['uid'];
     $_SESSION['username'] = $row['uname'];
+    $_SESSION['role'] = $row['role'];
     echo "yes";
   } else { echo "wrongpwd";}
 
