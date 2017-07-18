@@ -54,13 +54,14 @@
   padding-top: 1em;
   padding-right: 1em;
 }
-.btn-logout, .btn-login {
-  transition: all .3s ease-in-out;
+/*
+.btn-logout #logout{
+  transition: all .5s ease-in-out;
 }
-.btn-logout:hover, .btn-login:hover {
-  background-color: #025AA5;
-  color: #fff;
+.btn-logout:hover #logout {
+  font-size: 1.3em;
 }
+*/
 .main {
   padding-bottom: 2em;
 }

@@ -27,6 +27,27 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
     <title>class tester</title>
   </head>
   <body class="open-sans">
+    <!-- logout confirm modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="logoutModalLabel">Logout</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Do you really want to <b>log out?</b><br></p>
+            <p>Do you really want to make me cry...</p>
+          </div>
+          <div class="modal-footer">
+            <a href="inc/logout.php" type="button" class="btn btn-outline-danger">Logout</a>
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="frontpage">
       <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,10 +72,10 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
     </ul>
 
   </div>
-  <p class="namer"><?php echo $_SESSION['username']; ?></p>
-    <button type="submit" data-dir="home" class="btn btn-secondary btn-outline-danger btn-logout" name="logout" id="logout">Logout <i class="fa fa-hand-peace-o"></i></button>
 
 
+<p class="namer"><?php echo $_SESSION['username']; ?></p>
+<button  data-toggle="modal" data-target="#logoutModal" class=" btn btn-outline-secondary btn-logout" name="logout" >Logout</button>
 
 </nav>
 <div class="container-fluid shade main">

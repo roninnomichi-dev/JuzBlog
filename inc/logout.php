@@ -1,14 +1,17 @@
 <?php
-
-include_once 'inc/myconf.php';
-include_once 'inc/class.database.php';
+session_start();
+include_once $_SERVER['DOCUMENT_ROOT'] . '/inc/myconf.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/inc/class.database.php';
 $database = new Database();
 
-if (isset($_POST['user-logout-fp']) && !empty($_POST['user-logout-fp'])) {
+
   if ($database->doLogout()) {
+
     $database->redirect('../index.php');
-  };
-}
+  }
+
+
+
 
 
 
