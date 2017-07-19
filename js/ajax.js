@@ -89,8 +89,16 @@ $('.postlist li a').click(function() {
   $('#writebox').load('updatepost_form.php', { post: getpost });
 });
 
+$('.killuser-btn').submit(function(){
+  var uid = $(this).attr('data-id');
+  $.post('delete-user.php', {post: uid}, function(data, textStatus, xhr) {
+    alert(data);
+  });
+})
+$('.viewpost-btn').click(function(){
+  var usid = $(this).attr('id');
+  var usnm = $(this).attr('data-id');
+$('#uposts').load('list-userposts.php', {user: usid, name: usnm });
 
-
-
-
+});
 });

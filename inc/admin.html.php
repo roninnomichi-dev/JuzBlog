@@ -107,8 +107,8 @@ $database->execute();
       $database->bind(':uid', $user);
       $database->execute(); ?>
       <td><?php echo $database->getCount(); ?></td>
-      <td><button class="btn btn-success btn-sm" type="submit" name="viewpost-btn" id="viewpost-btn" data-id="<?php echo $user; ?>">view posts</button></td>
-      <td><button class="btn btn-warning btn-sm" type="submit" name="killuser-btn"  id="killluser-btn" data-id="<?php echo $user; ?>">delete user</button></td>
+      <td><button class="btn btn-success btn-sm viewpost-btn" type="submit" name="viewpost-btn" id="<?php echo $user; ?>" data-id="<?php echo $row['uname']; ?>">view posts</button></td>
+      <td><button class="btn btn-warning btn-sm killluser-btn" type="submit" name="killuser-btn"   data-id="<?php echo $user; ?>">delete user</button></td>
     </tr>
   <?php endforeach; ?>
     </tbody>
