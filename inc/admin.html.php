@@ -12,11 +12,12 @@ $page = "admin";
 include 'head.html.php';
 
  ?>
+ </div>
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12">
       <header>
-        <h1 class="display-3 text-white"><?php echo $page; ?> <i class="fa fa-tachometer"></i></h1>
+        <h1 class="display-3"><?php echo $page; ?> <i class="fa fa-tachometer"></i></h1>
       </header>
     </div>
   </div>
@@ -24,11 +25,11 @@ include 'head.html.php';
     <div class="col-sm-2">
         <!-- sidebar menu -->
 <ul class="list-group">
-  <li class="list-group-item"></li>
-    <li class="list-group-item"></li>
-      <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
-          <li class="list-group-item"></li>
+  <li class="list-group-item">link</li>
+    <li class="list-group-item">link</li>
+      <li class="list-group-item">link</li>
+        <li class="list-group-item">link</li>
+          <li class="list-group-item">link</li>
 </ul>
 
     </div>
@@ -63,39 +64,59 @@ $database->execute();
 </div>
 
 <div class="row">
-  <div class="col-sm-12">
-    <h2 class="text-white">blog users <small>examle table</small></h2>
-    <p class="text-white">later: <pre>&lt;?php include 'user-table.php'; ?></pre> OR maybe <pre>&lt;?php $document->query(); ?></pre> etc.</p>
+  <div class="col-sm-2">
+
+  </div>
+  <div class="col-sm-10">
+    <div class="container">
+
+
+    <h2 class="">blog users</h2>
+
+
+
     <table class="table table-striped">
   <thead>
     <tr>
       <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th>userame</th>
+      <th>email</th>
+      <th>posts</th>
+      <th>view posts</th>
+      <th>remove user</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+
+      <?php
+  $database->query("SELECT uid, uname, email  FROM users");
+  $database->execute();
+  $rows= $database->resultSet();
+
+  foreach($rows as $row): ?>
+  <tr>
+      <th scope="row">
+      <?php
+      $user = $row['uid'];
+      ?>
+    </th>
+      <td><?php echo $row['uname']; ?></td>
+      <td><?php echo $row['email']; ?></td>
+      <?php
+      $database->query("SELECT COUNT(*) FROM blogposts WHERE author_id = :uid");
+      $database->bind(':uid', $user);
+      $database->execute(); ?>
+      <td><?php echo $database->getCount(); ?></td>
+      <td><button class="btn btn-success btn-sm" type="submit" name="viewpost-btn" id="viewpost-btn" data-id="<?php echo $user; ?>">view posts</button></td>
+      <td><button class="btn btn-warning btn-sm" type="submit" name="killuser-btn"  id="killluser-btn" data-id="<?php echo $user; ?>">delete user</button></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+  <?php endforeach; ?>
+    </tbody>
+  </table>
+  </div>
+  <div id="uposts">
+    <!-- load user-post list ajax/postlist.html.php -->
+  </div>
   </div>
 
 </div>
