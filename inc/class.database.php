@@ -66,6 +66,9 @@ public function rowCount(){
     return $this->stmt->rowCount();
 }
 
+public function getCount(){
+  return $this->stmt->fetchColumn();
+}
 public function lastInsertId(){
     return $this->dbh->lastInsertId();
 }
@@ -134,7 +137,7 @@ public function doLogout()
   unset($_SESSION['user_session']);
   unset($_SESSION['username']);
   session_destroy();
-  
+
   return true;
 }
 

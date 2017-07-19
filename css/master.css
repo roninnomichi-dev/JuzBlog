@@ -7,6 +7,9 @@
   height: 100vh;
 
   background-image: url("../img/blogtype.jpg");
+
+
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -54,26 +57,54 @@
   padding-top: 1em;
   padding-right: 1em;
 }
-.panel-box{
-  width: 50%;
-  float: left;
-
-}
-.panel {
-/* position: relative; */
-  overflow: hidden;
-  transition: all 1s ease-in-out;
-}
-.panel i {
-/*  position: absolute; */
-  transition: all 1s ease-in-out;
-
-}
-.panel-content {
-/*  position: absolute; */
+.fxContent {
+  position: absolute;
   right: 0;
   top: 0;
   transition: all 1s ease-in-out;
+
+}
+
+.fxMenu {
+  list-style-type: none;
+
+}
+
+.fxMenu li {
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+  height: 90px;
+  margin: 5px;
+  padding-left: 5px;
+
+  transition: all 1s ease-in-out;
+  background-color:rgb(43, 46, 46);
+
+}
+
+.fxMenu li i {
+  position: absolute;
+  transition: all 1s ease-in-out;
+
+}
+.fxMenu li h1 {
+    float: right;
+    padding-top: 10%;
+    transition: all 1s ease-in-out;
+
+}
+/* on Hover */
+
+.fxMenu li:hover {
+  background-color: #fff;
+}
+.fxMenu li:hover h1 {
+color: #D9534F;
+}
+.fxMenu li:hover i {
+  transform: rotate(-40deg) scale(1.5);
+
 }
 .main {
   padding-bottom: 2em;
