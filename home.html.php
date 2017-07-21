@@ -157,7 +157,7 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
   <div class="col-sm-12">
     <div class="container">
       <h1 class="display-2">Latest Posts</h1><br>
-  <h4 class="">What are they talking about in JuzWorld?</h4>
+   <p class="text-muted">What are they talking about in JuzWorld?</p>
     </div>
 
   </div>

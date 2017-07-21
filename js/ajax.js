@@ -116,7 +116,7 @@ $('.killuser-btn').submit(function(){
 $('.viewpost-btn').click(function(){
   var usid = $(this).attr('id');
   var usnm = $(this).attr('data-id');
-$('#uposts').load('list-userposts.php', {user: usid, name: usnm });
+$('#uposts').load('list-userposts-tbl.php', {user: usid, name: usnm });
 
 });
 });

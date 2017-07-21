@@ -77,8 +77,8 @@ include 'inc/myconf.php';
       	<br />
             <label>Don't have account yet ! <a href="/inc/userin.html.php">Sign Up</a></label>
       </form>
-      <div class="progress">
-        <div id="progbar-login" class="progress-bar progress-bar-animated progress-bar-striped bg-success fade show" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress fade show">
+        <div id="progbar-login" class="progress-bar progress-bar-animated progress-bar-striped bg-success " role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
       <br>
     </div>

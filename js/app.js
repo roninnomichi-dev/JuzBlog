@@ -12,13 +12,13 @@ $('#d1,#d2,#d3').each(function(i) {
 });
 
 
-
+/*
 $('.slida').click(function() {
   var target = $(this).attr('id');
   $('section[data-get=' + target + ']').slideToggle('slow');
 
 });
-
+*/
 
 
 $('#write-blog-btn').click(function () {
