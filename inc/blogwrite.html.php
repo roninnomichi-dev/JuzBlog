@@ -56,7 +56,7 @@ include 'head.html.php';
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
+
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
@@ -66,11 +66,11 @@ include 'head.html.php';
 <div class="container-fluid">
 
 
-      <div class="row header shade">
+      <div class="row header">
         <div class="col-sm-9">
 
 
-      <h1 id="rite"class="display-3 text-white">write.</h1>
+      <h1 id="rite"class="display-3 text-white">write. <span>with markdown support!</span></h1>
       <h1 id="edit" class="display-3 text-white gone">edit.</h1>
       <span id="helper" class="text-danger display-4 fade show"></span>
     </div>
@@ -110,8 +110,8 @@ include 'head.html.php';
   </div>
 </div>
 <div class="col-sm-2">
-  <p class="text-white">your posts</p>
-  <small class="text-white">click to edit</small>
+  <p class="text-white text-right">your posts</p>
+  <p class="text-white text-right">click to edit</p>
   <?php
 
   $database->query('SELECT post_id, title, content, post_date  FROM blogposts WHERE author_id = :uid');
@@ -132,10 +132,7 @@ include 'head.html.php';
 </div>
 <div class="row ">
   <div class="col-sm-12">
-    <h3>JuzBlog now has Markdown support!. <br><small>not familiar with markdown?</small></h3>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mdModal">
-      Markdown help
-    </button>
+
   </div>
 </div>
 <div class="row">

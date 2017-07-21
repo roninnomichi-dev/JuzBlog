@@ -138,7 +138,7 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
   <br>
         <hr class="">
 </div>
-
+<br>
         </div>
 
 <div class="container-fluid">
@@ -146,7 +146,7 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
     <div class="col-sm-12">
       <div class="container-fluid">
 
-
+<br>
 
   </div>
     </div>
@@ -163,20 +163,19 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
 
   <div class="row">
     <div class="col-sm-12">
-    <div class="container">
+    <div class="container postlink">
       <?php  include 'inc/postlink.html.php'; ?>
     </div>
 
     </div>
 
-    <button type="button" class="btn btn-sm btn-secondary" id="more-btn" name="more-btn">more</button>
-</div>
+
 </div>
 
 <footer class="py-5 bg-inverse">
         <div class="container">
 
-            <p class="m-0 text-right text-white">Copyright &copy; JuzWeb 2017</p>
+            <p class="text-right text-white">Copyright &copy; JuzWeb 2017</p>
         </div>
 
 

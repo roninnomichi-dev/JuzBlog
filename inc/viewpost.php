@@ -19,7 +19,7 @@ include 'head.html.php';
       <div class="header">
       <h1 class="display-3 text-white"><?php echo $page; ?> from <?php echo $post['uname']; ?></h1>
       </div>
-
+</div>
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-9">
@@ -27,10 +27,10 @@ include 'head.html.php';
 
 
       <p class="text-left text-muted"><?php echo date('jS M Y H:i:s', strtotime($post['post_date'])); ?></p>
-      <h1 class="display-2 text-white"><?php echo $post['title']; ?></h1>
-      
-      <div class="container text-white">
-        <p class="text-white">
+      <h1 class="display-2"><?php echo $post['title']; ?></h1>
+
+      <div class="container">
+        <p class="">
         <?php echo $parsedown->text($post['content']); ?>
 
       </p>
@@ -42,7 +42,7 @@ include 'head.html.php';
     </div>
     <div class="col-sm-3">
 
-    <p class="text-white text-right">more from <?php echo $post['uname']; ?></p>
+    <p class="text-right">more from <?php echo $post['uname']; ?></p>
   <?php include 'list-userposts-view.php'; ?>
     </div>
   </div>

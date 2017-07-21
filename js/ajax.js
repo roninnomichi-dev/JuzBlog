@@ -57,18 +57,18 @@ $('#errmsg').html(data);
   $.ajax({
     url: 'ajax.php',
     type: 'post',
-    //dataType: 'json',
     data: formData
   })
   .done(function(data) {
     if (data == "yep") {
       $('#yep').css('display', 'block');
-
+    }else{
+      $('#nup').css('display', 'block').html(data);
     }
   })
   .fail(function(data) {
     console.log(data);
-    $('#nup').css('display', 'block');
+    $('#nup').css('display', 'block').html(data);
   })
   .always(function() {
     console.log("complete");
