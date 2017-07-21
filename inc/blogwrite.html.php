@@ -23,6 +23,37 @@ include 'head.html.php';
       <div class="modal-body">
         <p><b>What is Markdown?</b><br>
         </p>
+        <section>
+          <p>Markdown is a simple way to write formatted text for the web without any need for a word processor, crazy programming skills or malware infested windows software. All you need is a <i>plain text editor</i> like notepad</p>
+          <br>
+          <p>Markdown uses basic keyboard symbols to indicate your formatting choices.
+        <strong>like this:</strong></p>
+        <pre><code class="markdown">#   heading size 1
+        ##  heading size 2
+        ### heading size 3
+
+        --------- horizontal rule
+
+        _italics_
+        **bold**
+        ++underline++
+        ~~strikethrough~~
+
+        * list items
+            * nested list item
+
+        &gt;blockquote
+
+        [hyperlink](http://assemble.io/docs/Cheatsheet-Markdown.html)
+        ![image link](pictures/photos/mypic.jpg)
+
+        </code></pre>
+
+        <p>Markdown will then output formatted text, or HTML formatted text when needed.
+        Thus, if you write markdown in the blog, users will see nicely formatted text.
+      </p><a href="md-cheat.php">markdown cheatsheet</a>
+        </section>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary">Save changes</button>

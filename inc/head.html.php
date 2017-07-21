@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../css/master.css">
+<link rel="shortcut icon" href="../img/JWicon32.png" />
     <title><?php echo $page; ?></title>
   </head>
   <body class="open-sans">
@@ -57,6 +58,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="admin.html.php">admin</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="md-cheat.php">markdown help</a>
       </li>
     </ul>
   </div>

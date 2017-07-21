@@ -119,4 +119,5 @@ $('.viewpost-btn').click(function(){
 $('#uposts').load('list-userposts-tbl.php', {user: usid, name: usnm });
 
 });
+
 });
