@@ -12,12 +12,12 @@ ON author_id = users.uid WHERE post_id = :postID');
 $database->bind(':postID', $postID);
 $post = $database->single();
 $author = $post['author_id'];
-$page = "words.";
+$page = "words";
 include 'head.html.php';
  ?>
 
       <div class="header">
-      <h1 class="display-3 text-white"><?php echo $page; ?></h1>
+      <h1 class="display-3 text-white"><?php echo $page; ?> from <?php echo $post['uname']; ?></h1>
       </div>
 
 <div class="container-fluid">
@@ -28,7 +28,7 @@ include 'head.html.php';
 
       <p class="text-left text-muted"><?php echo date('jS M Y H:i:s', strtotime($post['post_date'])); ?></p>
       <h1 class="display-2 text-white"><?php echo $post['title']; ?></h1>
-      <p class="text-left text-white">by: <?php echo $post['uname']; ?></p>
+      
       <div class="container text-white">
         <p class="text-white">
         <?php echo $parsedown->text($post['content']); ?>
@@ -42,7 +42,7 @@ include 'head.html.php';
     </div>
     <div class="col-sm-3">
 
-    <p class="text-white h6">posts by <?php echo $post['uname']; ?></p>
+    <p class="text-white text-right">more from <?php echo $post['uname']; ?></p>
   <?php include 'list-userposts-view.php'; ?>
     </div>
   </div>

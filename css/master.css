@@ -123,3 +123,12 @@ color: #D9534F;
 #clear-btn {
   margin: 7px;
 }
+.uposts a{
+  text-decoration: none;
+}
+.uposts ul {
+  list-style-type: none;
+}
+.uposts hr {
+  background-color: white;
+}
