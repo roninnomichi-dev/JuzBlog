@@ -14,11 +14,15 @@ foreach ($rows as $post):
  ?>
 
  <p class="text-muted"><?php echo date("F jS, Y", strtotime($post['post_date'])); ?></p>
-        <h1 class="display-3 slida" <?php echo 'id="' . $post['post_id'] . '"'; ?> > <?php echo $post['title']; ?></h1>
-        <p class="lead"><?php echo $post['uname']; ?> </p>
-        <section class="content" <?php echo 'data-get="' . $post['post_id'] . '"'; ?>><?php
+
+  <h2 class="display-4 slida" <?php echo 'id="' . $post['post_id'] . '"'; ?> > <?php echo $post['title']; ?></h2>
+
+  <p class="lead"><?php echo $post['uname']; ?> </p>
+
+  <section class="content" <?php echo 'data-get="' . $post['post_id'] . '"'; ?>><?php
         $cont = $post['content'];
         echo $Parsedown->text($cont); ?></section>
+
 <hr>
 <?php
  endforeach;

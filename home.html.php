@@ -81,24 +81,31 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
 <div class="container-fluid shade main">
 
 
-        <div class="jumbotron jumbotron-fluid">
+
 
 
 
         <h1 class="display-2 text-white">hello <?php echo $_SESSION['username']; ?></h1>
-        <p class="lead text-white"><b>Here is juzzy's first real attempt at making a blog. It took some real work to cram the knowledge into a rusty, unwilling mind.</b>
-        </p>
 
 
+
+<div class="jumbotron jumbotron-fluid">
+
+  <div class="container text-white">
+
+    <h3 class="display-3"> Get talking.  <span id="d1">blah,  </span><span id="d2">blah, </span><span id="d3">blah...</span></h3>
+
+  </div>
 
   </div>
         <div class="row">
           <div class="col-sm-12">
-            <div class="container text-xs-center text-white">
-        <i class="fa fa-bullhorn fa-5x"></i>      <h3> It's somewhere you can scream your abuse at the cosmos <small>and pretend to yourself that someone might be listening...</small></h3>
+            <div class="container text-white">
+
             </div>
           </div>
         </div>
+      </div>
         <div class="row">
   <div class="col-sm-4">
     <div class="card">
@@ -146,29 +153,32 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
   </div>
     </div>
   </div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="container">
+      <h1 class="display-2">Latest Posts</h1><br>
+  <h4 class="">What are they talking about in JuzWorld?</h4>
+    </div>
 
-  <h1 class="display-2">Latest Posts</h1><br>
-  <h4>What are they talking about in JuzWorld?</h4>
+  </div>
+</div>
+
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-sm-12">
     <div class="container">
       <?php  include 'inc/postlink.html.php'; ?>
     </div>
 
     </div>
 
-<div class="col-md-4">
-  <div class="container-fluid">
-
-  </div>
-</div>
+    <button type="button" class="btn btn-sm btn-secondary" id="more-btn" name="more-btn">more</button>
 </div>
 </div>
 
 <footer class="py-5 bg-inverse">
         <div class="container">
-          <button type="submit" class="btn btn-secondary btn-logout" name="logout" id="logout">Logout <i class="fa fa-hand-peace-o"></i></button>
-            <p class="m-0 text-center text-white">Copyright &copy; JuzWeb 2017</p>
+
+            <p class="m-0 text-right text-white">Copyright &copy; JuzWeb 2017</p>
         </div>
 
 

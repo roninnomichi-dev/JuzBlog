@@ -1,5 +1,21 @@
 $(document).ready(function() {
-//ajax calls
+var $prog =  $('.progress'), $progbar = $('#progbar-login');
+function move() {
+
+  var width = 1;
+
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+
+      $progbar.css('width', width + '%');
+
+    }
+  }
+}
 //login ajax
 
 $('#user-login-fp').submit(function(e){
@@ -12,8 +28,10 @@ $.ajax({
   data: formData,
   success: function(data) {
    if(data == "yes"){
-$('#btn-login').html('checking...');
-  setTimeout(' window.location.href = "home.html.php"; ',1000);
+$prog.show();
+move();
+ setTimeout('window.location.href = "home.html.php";', 1000);
+
 } else if (data == "wrongpwd") {
   $('#nup').css('display', 'block');
   $('#errmsg').html("Wrong Password, try again...");
@@ -31,7 +49,7 @@ $('#errmsg').html(data);
 }
 })
 });
-
+// register
   $('#register').submit(function(e){
   e.preventDefault();
   formData = $(this).serialize();
@@ -57,7 +75,7 @@ $('#errmsg').html(data);
   });
 });
 //register name check  keyup()
-
+//post a blog
 $('#post-blog').submit(function(e){
   e.preventDefault();
   formData = $(this).serialize();
