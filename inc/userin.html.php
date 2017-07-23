@@ -78,7 +78,7 @@ $database = new Database();
   </button>
     <p>You are now a registered JuzBlogger!</p>
     <p>with power comes great responsibility - think b4 u post</p>
-<a class="btn btn-success"  href="../index.html.php">Lets go log in! <i class="fa fa-thumbs-o-up"></i></a>
+<a class="btn btn-success"  href="../index.php">Lets go log in! <i class="fa fa-thumbs-o-up"></i></a>
     </div>
     <div id="nup" class="alert alert-warning alert-dismissible fade show" role="alert">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
