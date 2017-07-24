@@ -11,7 +11,10 @@ $('#d1,#d2,#d3').each(function(i) {
    $(this).delay( i*(duration/2) ).animate({opacity:100}, duration);
 });
 
-
+$('#lmt').hover(function () {
+  $(this).addClass('text-danger');
+  
+})
 /*
 $('.slida').click(function() {
   var target = $(this).attr('id');

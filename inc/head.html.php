@@ -42,7 +42,7 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">JuzWeb Blog - <?php echo $page; ?></a>
+  <a class="navbar-brand" href="https://github.com/roninnomichi-dev">JuzBlog <span class="text-info"><?php echo $page; ?></span></a>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -62,10 +62,13 @@
       <li class="nav-item">
         <a class="nav-link" href="md-cheat.php">markdown help</a>
       </li>
+      <li class="nav-item">
+        <a id="lmt" data-toggle="modal" data-target="#logoutModal" class=" nav-link btn-logout" name="logout" >logout</a>
+      </li>
     </ul>
   </div>
   <p class="namer"><?php echo $_SESSION['username']; ?></p>
-  <!-- logout -->
-    <button  data-toggle="modal" data-target="#logoutModal" class=" btn btn-outline-secondary btn-logout" name="logout" >Logout</button>
+
+
 
 </nav>

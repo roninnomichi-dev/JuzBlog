@@ -48,7 +48,7 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">JuzWeb Blog Tester</a>
+  <a class="navbar-brand" href="https://github.com/roninnomichi-dev">JuzBlog</a>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
@@ -67,13 +67,16 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
       <li class="nav-item">
         <a class="nav-link" href="/inc/md-cheat.php">markdown help</a>
       </li>
+      <li class="nav-item">
+        <a id="lmt" data-toggle="modal" data-target="#logoutModal" class=" nav-link btn-logout" name="logout" >logout</a>
+      </li>
     </ul>
 
   </div>
 
 
 <p class="namer"><?php echo $_SESSION['username']; ?></p>
-<button  data-toggle="modal" data-target="#logoutModal" class=" btn btn-outline-secondary btn-logout" name="logout" >Logout</button>
+
 
 </nav>
 <div class="container-fluid shade main">
@@ -92,6 +95,10 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
   <div class="container text-white">
 
     <h3 class="display-3"> Get talking.  <span id="d1">blah,  </span><span id="d2">blah, </span><span id="d3">blah...</span></h3>
+    <div class="container text-center">
+      <p class="text-white">JuzBlog is juzweb's simple, <b>multi-user</b> blogging platform.</p>
+    <a class="btn btn-primary btn-lg" href="/inc/about.php">learn more</a>
+    </div>
 
   </div>
 
@@ -105,7 +112,7 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
         </div>
       </div>
         <div class="row">
-  <div class="col-sm-4">
+  <div class="col-md-4">
     <div class="card">
       <div class="card-block">
         <h3 class="card-title">Wanna feel important?.</h3>
@@ -115,7 +122,7 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
     </div>
   </div>
 
-  <div class="col-sm-4">
+  <div class="col-md-4">
     <div class="card">
       <div class="card-block">
         <h3 class="card-title">Juzzy's Listening</h3>
@@ -125,7 +132,7 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
     </div>
   </div>
 
-  <div class="col-sm-4">
+  <div class="col-md-4">
     <div class="card">
       <div class="card-block">
         <h3 class="card-title">This does nothing!</h3>
@@ -152,7 +159,7 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
     </div>
   </div>
 <div class="row">
-  <div class="col-sm-12">
+  <div class="col">
     <div class="container">
       <h1 class="display-2">Latest Posts</h1><br>
    <p class="text-muted">What are they talking about in JuzWorld?</p>
@@ -162,7 +169,7 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
 </div>
 
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col">
     <div class="container postlink">
       <?php  include 'inc/postlink.html.php'; ?>
     </div>
