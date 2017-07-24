@@ -42,7 +42,7 @@ include 'head.html.php';
     </div>
     <div class="col-sm-3">
 
-    <p class="text-right">more from <?php echo $post['uname']; ?></p>
+    <p class="text-xs-center text-md-right">more from <?php echo $post['uname']; ?></p>
   <?php include 'list-userposts-view.php'; ?>
     </div>
   </div>

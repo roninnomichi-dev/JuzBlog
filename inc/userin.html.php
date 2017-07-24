@@ -11,7 +11,7 @@ $database = new Database();
  <html>
    <head>
      <meta charset="utf-8">
-
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="../css/master.css">
@@ -43,8 +43,8 @@ $database = new Database();
   </p>
 </div>
 <div class="container-fluid">
-  <div class="row shade">
-    <div class="col-sm-9  text-white">
+  <div class="row">
+    <div class="col text-white">
       <form id="register" name="register" class="form" >
         <fieldset class="form-group">
           <label class="" for="name">handle</label>
@@ -61,17 +61,13 @@ $database = new Database();
         <button type="submit" class="btn btn-success" id="reg" name="button-reg" >submit</button>
       </form>
     </div>
-    <div class="col-sm-3">
-      <div class="sidebar">
 
-        </div>
 
-      </div>
     </div>
 
 </div>
-<div class="row shade">
-  <div class="col-sm-12">
+<div class="row">
+  <div class="col">
     <div id="yep" class="alert alert-success alert-dismissible fade show" role="alert">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>

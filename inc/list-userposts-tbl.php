@@ -27,7 +27,7 @@ $post = $database->resultSet();
  <tbody>
    <?php foreach($post as $row): ?>
 
-   <tr>
+   <tr class="klpst" >
        <th scope="row">
 
      </th>
@@ -35,7 +35,7 @@ $post = $database->resultSet();
        <td><?php echo $row['title']; ?></td>
        <td><?php echo $row['LEFT(content,20)']; ?></td>
       <td><?php echo date("F jS, Y", strtotime($row['post_date']));?></td>
-      <td><button class="btn btn-danger btn-sm killpost-btn" type="submit" name="killpost-btn" data-pid="<?php echo $row['post_id']; ?>">delete post</button></td>
+      <td ><button class="btn btn-danger btn-sm killpost-btn" type="submit" name="killpost-btn" data-pid="<?php echo $row['post_id']; ?>">delete post</button></td>
     </tr>
   <?php endforeach; ?>
     </tbody>

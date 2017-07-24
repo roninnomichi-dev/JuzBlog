@@ -15,25 +15,15 @@ include 'head.html.php';
  </div>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col">
       <header>
         <h1 class="display-3"><?php echo $page; ?> <i class="fa fa-tachometer"></i></h1>
       </header>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-2">
-        <!-- sidebar menu -->
-<ul class="list-group">
-  <li class="list-group-item">link</li>
-    <li class="list-group-item">link</li>
-      <li class="list-group-item">link</li>
-        <li class="list-group-item">link</li>
-          <li class="list-group-item">link</li>
-</ul>
 
-    </div>
-    <div class="col-md-5">
+    <div class="col">
 <!-- actions -->
 <?php
 $database->query('SELECT COUNT(*) FROM users');
@@ -52,7 +42,7 @@ $database->execute();
 </div>
 
     </div>
-    <div class="col-md-5">
+    <div class="col">
     <div class="container-fluid">
       <ul class="fxMenu">
         <li><i class="fa fa-comments-o fa-5x"></i><h1>47</h1><div class="fxContent text-warning"><h2>comments</h2></div></li>
@@ -64,10 +54,8 @@ $database->execute();
 </div>
 
 <div class="row">
-  <div class="col-sm-2">
 
-  </div>
-  <div class="col-sm-10">
+  <div class="col">
     <div class="container">
 
 
@@ -113,12 +101,12 @@ $database->execute();
   <?php endforeach; ?>
     </tbody>
   </table>
-  </div>
+
   <div id="uposts">
     <!-- load user-post list ajax/postlist.html.php -->
   </div>
   </div>
-
+</div>
 </div>
 
 

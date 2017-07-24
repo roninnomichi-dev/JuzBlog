@@ -63,7 +63,7 @@
         <a class="nav-link" href="md-cheat.php">markdown help</a>
       </li>
       <li class="nav-item">
-        <a id="lmt" data-toggle="modal" data-target="#logoutModal" class=" nav-link btn-logout" name="logout" >logout</a>
+        <a data-toggle="modal" data-target="#logoutModal" class="lmt nav-link btn-logout" name="logout" >logout</a>
       </li>
     </ul>
   </div>

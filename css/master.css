@@ -71,9 +71,8 @@
   overflow: hidden;
   width: 350px;
   height: 90px;
-  margin: 5px;
+  margin:  5px;
   padding-left: 5px;
-
   transition: all 1s ease-in-out;
   background-color:rgb(43, 46, 46);
 
@@ -112,7 +111,7 @@ color: #D9534F;
 .slida:hover {
   color: rgb(51, 85, 231);
 }
-.postlist li {
+.postlist li, .adm {
   list-style-type: none;
   font-size: 0.8em;
 }
@@ -133,4 +132,12 @@ color: #D9534F;
 }
 h1#rite span {
   font-size: 0.5em;
+}
+@media screen and (min-width: 480px) {
+  .fxMenu li {
+  width: 350px;
+  height: 90px;
+  margin: 10px 5px;
+  padding-bottom: 5px;
+  }
 }

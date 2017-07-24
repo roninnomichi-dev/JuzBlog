@@ -81,7 +81,7 @@ include 'head.html.php';
       </div>
       </div>
 
-<div class="row shade">
+<div class="row">
 <div class="col-sm-10">
   <div class="container">
     <div id="writebox">
@@ -101,6 +101,7 @@ include 'head.html.php';
 
     <input type="hidden" name="author" value="<?php  echo $_SESSION['user_session'];?>">
     <button type="submit" name="post-blog-btn" class="btn btn-primary">Submit</button>
+    <button id="md-btn" type="button" data-toggle="modal" data-target="#mdModal" class="btn btn-success">markdown basics</button>
   </form>
 
 
@@ -110,8 +111,8 @@ include 'head.html.php';
   </div>
 </div>
 <div class="col-sm-2">
-  <p class="text-white text-right">your posts</p>
-  <p class="text-white text-right">click to edit</p>
+  <p class="text-white text-xs-center text-md-right">your posts</p>
+  <p class="text-white text-xs-center text-md-right">click to edit</p>
   <?php
 
   $database->query('SELECT post_id, title, content, post_date  FROM blogposts WHERE author_id = :uid');
@@ -131,12 +132,12 @@ include 'head.html.php';
 
 </div>
 <div class="row ">
-  <div class="col-sm-12">
-
+  <div class="col text-center">
+    
   </div>
 </div>
 <div class="row">
-  <div class="col-sm-12">
+  <div class="col">
 
   </div>
 </div>

@@ -3,14 +3,17 @@
     <footer class=" bg-inverse">
         <div class="container-fluid">
 
-          <ul class="">
+          <ul class="footlist">
             <p class="text-white">sitemap</p>
-  <li><a class=" " href="#">home</a></li>
-  <li><a class="" href="#">write</a></li>
-  <li><a class="" href="#">about</a></li>
-  <li><a class="" href="#">admin</a></li>
+  <li><a class="" href="../home.html.php">home</a></li>
+  <li><a class="" href="blogwrite.html.php">write</a></li>
+  <li><a class="" href="about.php">juzweb</a></li>
+  <li><a class="" href="admin.html.php">admin</a></li>
+  <li><a href="md-cheat.php">markdown</a></li>
+  <a  data-toggle="modal" data-target="#logoutModal" class="lmt btn-logout" name="logout" >logout</a>
+</li>
 </ul>
-            <p class="m-0 text-right text-white">Copyright &copy; JuzWeb 2017</p>
+            <p class="text-right text-white">Copyright &copy; JuzWeb 2017</p>
         </div>
         <!-- /.container -->
     </footer>

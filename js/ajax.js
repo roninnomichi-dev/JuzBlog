@@ -119,5 +119,13 @@ $('.viewpost-btn').click(function(){
 $('#uposts').load('list-userposts-tbl.php', {user: usid, name: usnm });
 
 });
+$('.klpst').on('click',function(){
+var kpid = $('.killpost-btn').attr('data-pid');
+$.post('delete.php', {post_id: kpid}, function(data, textStatus, xhr) {
+  if(data == 'deleted'){
+    $('.killpost-btn').html(data).addClass('btn-warning, btn-outline-danger').removeClass('btn-danger');
+  }else{ console.log(data, textStatus, xhr);};
+});
+})
 
 });
