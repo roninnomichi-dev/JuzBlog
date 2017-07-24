@@ -14,7 +14,7 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
 <html>
   <head>
     <meta charset="utf-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/master.css">
@@ -43,8 +43,9 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
         </div>
       </div>
     </div>
-    <div class="frontpage">
-      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+
+<div class=" frontpage"><!-- start .frontpage -->
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -79,7 +80,9 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
 
 
 </nav>
-<div class="container-fluid shade main">
+<div class="container-fluid"><!-- start page content container-fluid
+-->
+
 
 
 
@@ -91,7 +94,6 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
 
 
 <div class="jumbotron jumbotron-fluid">
-
   <div class="container text-white">
 
     <h3 class="display-3"> Get talking.  <span id="d1">blah,  </span><span id="d2">blah, </span><span id="d3">blah...</span></h3>
@@ -99,19 +101,21 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
       <p class="text-white">JuzBlog is juzweb's simple, <b>multi-user</b> blogging platform.</p>
     <a class="btn btn-primary btn-lg" href="/inc/about.php">learn more</a>
     </div>
-
+   </div>
   </div>
 
-  </div>
+
+
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col">
             <div class="container text-white">
 
             </div>
           </div>
         </div>
-      </div>
-        <div class="row">
+
+
+<div class="row">
   <div class="col-md-4">
     <div class="card">
       <div class="card-block">
@@ -146,18 +150,23 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
         <hr class="">
 </div>
 <br>
-        </div>
+
 
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12">
       <div class="container-fluid">
-
-<br>
-
-  </div>
+        <br>
+      </div>
     </div>
   </div>
+</div>
+</div><!-- end .cont fluid-->
+</div><!-- end .frontpage -->
+
+<div class="container"><!--start posts container -->
+
+
 <div class="row">
   <div class="col">
     <div class="container">
@@ -178,6 +187,7 @@ if(!$database->is_loggedin()) { $database->redirect('index.php');}
 
 
 </div>
+</div><!--end posts container -->
 
 <footer class="py-5 bg-inverse">
         <div class="container">

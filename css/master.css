@@ -4,16 +4,10 @@
 }
 
 .frontpage {
-
-
   background-image: url("../img/blogtype.png");
-
-
-
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 .jumbotron {
   background-color: rgba(255, 255, 255, 0);
