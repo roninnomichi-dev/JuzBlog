@@ -66,11 +66,12 @@
 
 }
 
-.fxMenu li {
+.fxItem {
   position: relative;
   overflow: hidden;
   width: 350px;
   height: 90px;
+  
   margin:  5px;
   padding-left: 5px;
   transition: all 1s ease-in-out;
@@ -78,12 +79,12 @@
 
 }
 
-.fxMenu li i {
+.fxItem i {
   position: absolute;
   transition: all 1s ease-in-out;
 
 }
-.fxMenu li h1 {
+.fxItem h1 {
     float: right;
     padding-top: 10%;
     transition: all 1s ease-in-out;
@@ -91,13 +92,13 @@
 }
 /* on Hover */
 
-.fxMenu li:hover {
+.fxItem:hover {
   background-color: #fff;
 }
-.fxMenu li:hover h1 {
+.fxItem:hover h1 {
 color: #D9534F;
 }
-.fxMenu li:hover i {
+.fxItem:hover i {
   transform: rotate(-40deg) scale(1.5);
 
 }

@@ -21,34 +21,33 @@ include 'head.html.php';
       </header>
     </div>
   </div>
+
+  <!-- animated boxes -->
   <div class="row">
 
     <div class="col">
-<!-- actions -->
+
 <?php
 $database->query('SELECT COUNT(*) FROM users');
 $database->execute();
  $usernum = $database->getCount();
   ?>
+
 <div class="container-fluid">
-<ul class="fxMenu">
-  <li><i class="fa fa-users fa-5x"></i><h1><?php echo $usernum; ?></h1><div class="fxContent text-danger"><h2>users</h2></div></li>
+<div class="fxMenu">
+
+  <div class="fxItem"><i class="fa fa-users fa-5x"></i><h1><?php echo $usernum; ?></h1><div class="fxContent text-danger"><h2>users</h2></div></div >
   <?php $database->query('SELECT COUNT(*) FROM blogposts');
   $database->execute();
   $postnum = $database->getCount(); ?>
-  <li><i class="fa fa-paper-plane-o fa-5x"></i><h1><?php echo $postnum; ?></h1><div class="fxContent text-success"><h2>posts</h2></div></li>
 
-</ul>
+
+  <div class="fxItem"><i class="fa fa-paper-plane-o fa-5x"></i><h1><?php echo $postnum; ?></h1><div class="fxContent text-success"><h2>posts</h2></div></div >
+
+  <div class="fxItem"><i class="fa fa-comments-o fa-5x"></i><h1>47</h1><div class="fxContent text-warning"><h2>comments</h2></div></div >
+
+  <div class="fxItem"><i class="fa fa-money fa-5x"></i><h1>0!</h1><div class="fxContent text-info"><h2>money for juz?</h2></div></div >
 </div>
-
-    </div>
-    <div class="col">
-    <div class="container-fluid">
-      <ul class="fxMenu">
-        <li><i class="fa fa-comments-o fa-5x"></i><h1>47</h1><div class="fxContent text-warning"><h2>comments</h2></div></li>
-
-        <li><i class="fa fa-money fa-5x"></i><h1>0!</h1><div class="fxContent text-info"><h2>money for juz?</h2></div></li>
-      </ul>
     </div>
   </div>
 </div>
